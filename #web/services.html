@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GG.home Services</title>
+    <style>
+        body {
+            font-family: 'Comfortaa', 'Montserrat', sans-serif;
+            background-color: #000;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .star {
+            position: absolute;
+            background: #fff;
+            width: 2px;
+            height: 2px;
+            border-radius: 50%;
+            animation: twinkling 3s infinite;
+        }
+
+        @keyframes twinkling {
+            0% {
+                opacity: 0;
+                transform: translateY(0);
+            }
+            50% {
+                opacity: 1;
+                transform: translateY(-10px);
+            }
+            100% {
+                opacity: 0;
+                transform: translateY(0);
+            }
+        }
+
+        .container {
+            width: 80%;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: #000;
+        }
+
+        ol {
+            list-style-type: decimal;
+            margin-left: 20px;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+            line-height: 1.4;
+            color: #333;
+            cursor: pointer;
+        }
+
+        a {
+            text-decoration: none;
+            color: #333;
+            transition: color 0.3s;
+        }
+
+        a:hover {
+            color: #000;
+        }
+
+        .titanium-network {
+          color: purple;
+        }
+
+        .titanium-network:hover {
+          text-decoration-line: underline;
+        }
+
+        .proxy-service,.game-hosting {
+            font-weight: bold;
+        }
+
+        .proxy-service:hover,.game-hosting:hover {
+            text-decoration: underline;
+        }
+
+        .note-proxy, .note-game {
+            color: red;
+        }
+
+        .note-proxy:hover, .note-game:hover {
+            text-decoration: underline;
+        }
+
+    footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 10px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+
+    </style>
+</head>
+<body>
+    <script>
+        function createStars() {
+            var numStars = 50;
+            var body = document.body;
+
+            for (var i = 0; i < numStars; i++) {
+                var star = document.createElement('div');
+                star.className = 'star';
+                star.style.top = Math.random() * 100 + 'vh';
+                star.style.left = Math.random() * 100 + 'vw';
+                body.appendChild(star);
+            }
+        }
+
+        window.onload = createStars;
+    </script>
+
+    <div class="container">
+        <h1><a class="header-one" href="https://sites.google.com/view/gg-home/" target="_blank">GG.home Services</a></h1>
+        <ol>
+            <li>
+                <a class="proxy-service" href="https://sites.google.com/view/gg-home/info/credits" target="_blank"><strong>Proxy Services</strong></a><br>
+                We provide proxy services. <span class="note-proxy">(Note: We do not own the proxies.)</span>
+            </li>
+
+            <li>
+                <a class="game-hosting" href="https://sites.google.com/view/gg-home/info/credits" target="_blank"><strong>Game Hosting</strong></a><br>
+                We host games. <span class="note-game">(Note: We do not own the games.)</span>
+            </li>
+
+            <!-- Add more services as needed -->
+        </ol>
+    </div>
+
+  <footer class="footer">
+    Website designed by Luke Moon &copy; 2024 GG.Home. All rights reserved.
+  </footer>
+</body>
+</html>

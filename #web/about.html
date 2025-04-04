@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About GG.Home</title>
+    <style>
+        body {
+            font-family: 'Comfortaa', 'Montserrat', sans-serif;
+            background-color: #000;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .star {
+            position: absolute;
+            background: #fff;
+            width: 2px;
+            height: 2px;
+            border-radius: 50%;
+            animation: twinkling 3s infinite;
+        }
+
+        @keyframes twinkling {
+            0% {
+                opacity: 0;
+                transform: translateY(0);
+            }
+            50% {
+                opacity: 1;
+                transform: translateY(-10px);
+            }
+            100% {
+                opacity: 0;
+                transform: translateY(0);
+            }
+        }
+
+        .container {
+            width: 80%;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent background */
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            border-radius: 10px; /* Rounded corners */
+            max-height: 80vh; /* Set maximum height for the container */
+            overflow-y: auto; /* Add a scrollbar when content overflows */
+        }
+
+        h1 {
+            text-align: center;
+            color: #000;
+        }
+
+        ol {
+            list-style-type: decimal;
+            margin-left: 20px;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+            line-height: 1.4;
+            color: #333; /* Darker text color */
+            cursor: pointer;
+        }
+
+        /* Style the links */
+        a {
+            text-decoration: none;
+            color: #333; /* Link color */
+            transition: color 0.3s;
+        }
+
+        /* Style the links on hover */
+        a:hover {
+            color: #000; /* Hover color */
+        }
+
+        .almost {
+          text-decoration-line: underline;
+          color: red;
+        }
+
+        .free-time {
+          text-decoration-line: underline;
+          color: red;
+        }
+
+    footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 10px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+    </style>
+</head>
+<body>
+    <!-- JavaScript code for generating random stars -->
+    <script>
+        function createStars() {
+            var numStars = 50; // Number of stars
+            var body = document.body;
+
+            for (var i = 0; i < numStars; i++) {
+                var star = document.createElement('div');
+                star.className = 'star';
+                star.style.top = Math.random() * 100 + 'vh'; // Random vertical position
+                star.style.left = Math.random() * 100 + 'vw'; // Random horizontal position
+                body.appendChild(star);
+            }
+        }
+
+        // Call the function to create stars when the page loads
+        window.onload = createStars;
+    </script>
+
+    <div class="container">
+        <h1>About GG.Home</h1>
+        <ol>
+            <li>
+                <strong>Our Goal</strong><br>
+                GG.Home is here to help you browse the internet safely and freely. We use special tools to make sure you can visit <span class="almost">almost</span> any website without restrictions.
+            </li>
+            <li>
+                <strong>Games for Fun</strong><br>
+                We also offer free game hosting, so you can play your favorite games during your <span class="free-time">free time</span>.
+            </li>
+        </ol>
+    </div>
+
+  <footer class="footer">
+    Website designed by Luke Moon &copy; 2024 GG.Home. All rights reserved.
+  </footer>
+</body>
+</html>
